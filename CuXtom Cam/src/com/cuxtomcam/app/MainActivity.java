@@ -40,13 +40,13 @@ public class MainActivity extends Activity {
 	private void startCuxtomCam() {
 		String folder = Environment.getExternalStorageDirectory()
 				+ File.separator + Environment.DIRECTORY_PICTURES
-				+ File.separator + "New";
+				+ File.separator + "CuxtomCam Sample";
 		Intent intent = new Intent(getApplicationContext(),
 				CuxtomCamActivity.class);
 		intent.putExtra(CuxtomIntent.CAMERA_MODE, CAMERA_MODE.VIDEO_MODE);
 		intent.putExtra(CuxtomIntent.ENABLE_ZOOM, true);
-		intent.putExtra(CuxtomIntent.FILE_NAME, "newpic");
-		intent.putExtra(CuxtomIntent.VIDEO_DURATION, 6);
+		intent.putExtra(CuxtomIntent.FILE_NAME, "newvideo");
+		intent.putExtra(CuxtomIntent.VIDEO_DURATION, 20);
 		intent.putExtra(CuxtomIntent.FOLDER_PATH, folder);
 		startActivityForResult(intent, CUXTOM_CAM_REQUEST);
 
